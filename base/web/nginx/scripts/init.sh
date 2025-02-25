@@ -4,7 +4,6 @@ if [ -z "$GZCTF_FLAG" ]; then
 fi
 
 sed -i "s/flag{seek_to_geek}/$GZCTF_FLAG/g" /var/www/html/index.php
-chmod 444 /flag
 unset GZCTF_FLAG
 
 nginx -g 'daemon off;'
