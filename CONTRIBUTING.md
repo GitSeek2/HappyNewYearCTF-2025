@@ -3,8 +3,8 @@
 😍 欢迎你的贡献，你可以为 HappyNewYearCTF 2025 做这些：
 
 - 新增题目
-- 新增 docker base image
-- 修复 bug
+- 新增基础镜像
+- 修复问题
 - 提出优化建议
 - ...
 
@@ -14,41 +14,60 @@
 
 HappyNewYearCTF 包含常见的 CTF 题目类别，包括 Web、Pwn、Reverse、Crypto、Misc，其中主要是 Web & Misc。
 
-如果你希望加入更多题目类别或添加新的题目，欢迎提交 PR。
+如果你希望加入更多题目类别或添加新的题目，欢迎提交 issue/PR。
 
 ## 二、出题流程
 
-最基础的 PR 工作流。
+工作流：**fork** -> **clone** -> **branch** -> **dev** -> **push** -> **PR**。
 
 ### 1. fork 本项目
 
-### 2. clone fork 后的仓库到本地
+点击仓库右上角 Fork 按钮创建属于你的副本。
+
+### 2. clone 仓库
+
+clone 你的 fork 仓库到本地。
 
 ```bash
-git clone https://github.com/<your-username>/HappyNewYearCTF.git
+git clone https://github.com/<你的 GitHub 用户名>/HappyNewYearCTF.git
+cd HappyNewYearCTF-2025
 ```
 
-### 3. 新建项目分支
-
-建议以题目名作为分支名。
+### 3. 新建分支
 
 ```bash
-git checkout -b <branch-name>
+git checkout -b <分支名>
 ```
 
-### 4. 在对应的目录下创建题目
+分支名建议遵循 `<题目类型>-<出题人ID>-<简短题目名>` 格式，例如 `web-zqingz-warmup`。
 
-注意到项目根目录下的 `.gitignore` 文件中添加了 `tmp/` 目录。你在 pull 本项目后可以新建 tmp 目录用于临时测试题目，git 将不会跟踪 tmp 目录下的文件。
+### 4. 创建题目
 
-### 5. 提交修改到你的 fork 仓库
+在对应题目分类目录下创建题目文件夹，文件夹下创建 `README.md` 文件，并填写题目信息，内容参考 `templates` 目录下的题目模板。
+
+因为项目根目录下的 `.gitignore` 文件中添加了 `tmp/` 目录，所以你在 pull 本项目后可以新建 `tmp` 目录用于临时测试题目，git 将不会跟踪 `tmp` 目录下的文件。
+
+### 5. 提交修改
+
+提交修改到你的 fork 仓库。
 
 ```bash
 git add .
 git commit -m "add(<题目类型>): <题目名>"
-git push origin <branch-name>
+git push origin <分支名>
 ```
 
+提交信息遵循 `add (<题目类型>)：<题目名>` 格式，例如 `add(web): warmup`。
+
 ### 6. 创建 pull request
+
+前往 GitHub 你的 Fork 仓库，
+
+点击 `Contribute` 按钮 -> 点击 `Open pull request` 按钮，
+
+标题（title）默认即可，描述（description）随意发挥，
+
+最后点击 `Create pull request` 按钮，over~
 
 ## 三、题目规范
 
