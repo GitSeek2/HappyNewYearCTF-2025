@@ -9,8 +9,8 @@
 -t/--tag: 镜像标签（默认latest）
 
 示例:
-python3 docker_builder.py -u <username> -p <dir> -t <tag>
-python3 docker_builder.py -u cssec -p ../base/web -t gzctf
+python3 docker_images_builder.py -u <username> -p <dir> -t <tag>
+python3 docker_images_builder.py -u cssec -p ../base/web -t gzctf
 """
 
 import os
