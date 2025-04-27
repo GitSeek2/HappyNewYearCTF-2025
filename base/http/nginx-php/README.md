@@ -1,5 +1,3 @@
-# nginx-php55
+# Nginx PHP
 
-环境：Nginx + PHP5.5.38
-
-适用：基于 PHP5.5.x 的 PHP 页面
+此目录用于构建支持 PHP 的 Nginx 镜像，适用于一般 PHP 题目。
