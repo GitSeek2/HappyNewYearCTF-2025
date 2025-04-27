@@ -1,0 +1,8 @@
+FROM kuborgh/php-5.2:latest
+
+COPY --chown=www-data:www-data src/ /var/www/html
+COPY --chown=www-data:www-data config/php.ini-development /etc/php/apache2-php5.2/php.ini
+COPY --chown=www-data:www-data config/000-project.conf /etc/apache2/sites-enabled/000-project.conf
+COPY --chmod=500 scripts/init.sh /init.sh
+
+CMD ["/init.sh"]

@@ -1,0 +1,7 @@
+FROM eugeneware/php-5.3:latest
+
+COPY --chown=www-data:www-data src/ /var/www/html
+COPY --chown=www-data:www-data config/php.ini-development /usr/local/lib/php.ini
+COPY --chmod=500 scripts/init.sh /init.sh
+
+CMD ["/init.sh"]
